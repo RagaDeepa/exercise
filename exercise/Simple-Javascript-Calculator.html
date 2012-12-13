@@ -1,8 +1,28 @@
 Simple-Javascript-Calculator.html
 <br>
 <script language="javascript" type="text/javascript">
-  function compute(f) {
+	function compute(f) {
+		if (!validateExpression(f)) {
+			Calc.Input.value = "Malformed expression";
+			return;
+		}
 		Calc.Input.value = eval(f);
+	}
+
+	function validateExpression(expression) {
+		var operatorCount = 0;
+		var array = expression.split('');
+		var operatorsString = "+-*/%";
+		for (var i in array) {
+			if (operatorsString.search("\\" + array[i]) != -1) {
+				operatorCount++;
+				if (operatorCount > 1) {
+					return false;
+				}
+			};
+		}
+		return true;
+
 	}
 </script>
 </br>
