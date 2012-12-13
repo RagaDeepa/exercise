@@ -1,0 +1,4 @@
+exercise
+========
+
+Affinova exercises
