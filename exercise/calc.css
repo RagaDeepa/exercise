@@ -1,0 +1,8 @@
+#parent{
+    border: 2px solid gray;
+    width: 180px; height: 120px;
+    padding-top: 6px;
+}
+#inputbox{
+    border: 1px solid black;
+}
